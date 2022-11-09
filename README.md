@@ -6,9 +6,7 @@ Most of this code was written during my bachelor internship in 2006...
 It is an implementation of the attack considered in : [PerQui06] [On the Impossibility of Building Secure Cliques-type Authenticated Group Key Agreement Protocols](https://perso.uclouvain.be/olivier.pereira/JCS05.pdf)
 While i tried to update it, this is really ugly code... but functional
 
-As of today (Nov 2022), it works with current OCaml version
-
-I'll try to clean the code up a little...
+As of today (Nov 2022), it works with current OCaml version (there was some oddities as graphics was removed from the ocaml core suite)
 
 ## Use
 Assuming a properly installed ocaml, simply run
