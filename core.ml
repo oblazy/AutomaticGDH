@@ -1,4 +1,5 @@
-#use "engrph.ml";;
+(*#use "engrph.ml";;*)  (* Use this to have an ugly visualisation of the protocol you wrote if the attack seems odd *)
+#use "nogrph.ml";; (* fast mode without intermediate visual*)
 #use "lect.ml";;
 #use "attack.ml";;
 #use "test3.ml";;

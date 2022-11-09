@@ -65,11 +65,6 @@ let lire nom =
   !prot;;
 
 
-let rec miroir l ll=
-  match l with
-    [] -> ll
-  |p::q -> miroir q (p::ll);;
-
 let rec f1 a l ll=
   match l with
     [] -> (1,(a,1)::(l@ll))
@@ -166,7 +161,7 @@ let ancetre s=
 let rec lookpi ((a,aa),b,(c,cc)) p =
   match p with
     []-> (false,[])
-  |d::[] -> failwith ("En th�orie il y a un nombre pair de noeuds")
+  |d::[] -> failwith ("Oh oh, there should be an even number of nodes")
   |(d,e,s)::((f,g,h)::q) -> if (d=c &&  cc < e) then
       let ((ob,oo),j)=ancetre h in 
       if (ob && cc=oo) then (true,(a,aa,"")::((c,cc,b)::p))
@@ -208,4 +203,4 @@ let rec cleanml l=
     [] -> []
   |p::q -> cleanm(p)::(cleanml(q));;
 
-let go file= cleanml(creepi (miroir(ctransmi(miroir(lire(file)) []) []) []) []);;
+let go file= cleanml(creepi (List.rev(ctransmi(List.rev (lire(file))) [])) []);;

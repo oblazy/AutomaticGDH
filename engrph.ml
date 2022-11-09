@@ -144,16 +144,6 @@ let uselistL ()=
     end;
   done;;
 
-let purge2 l t=
-  match l with
-    [] -> true
-  |q -> let (a,b,c)=List.hd(List.rev q) in t.(a)<>b ;;
-
-let rec purge l t=
-  match l with
-    [] -> []
-  |p::q -> if purge2 p t then purge q t else p::(purge q t);;
-
 let graphl l=
   let t=transfo l  in begin
     Graphics.set_color (Graphics.black);
