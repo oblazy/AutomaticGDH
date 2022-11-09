@@ -386,7 +386,6 @@ let calculp2 i j k sjj skk t lpi filename= (* Product of the contributions, like
 			output_string p ("\\usepackage[latin1]{inputenc}\n");
 			output_string p ("\\usepackage[T1]{fontenc}\n");
 			output_string p ("\\usepackage{geometry}\n");
-			output_string p ("\\usepackage[francais]{babel}\n");
 			output_string p ("\\usepackage[all]{xy}\n");
 			output_string p ("\\def\\labelstyle{\\textstyle}\n");
 			output_string p ("\\begin{document}\n");
@@ -571,9 +570,9 @@ calculp !i !j !k !sj !sk t lpi filename;end;;
 
 let attack3 t lpi filename=
 	let i=ref 1 and j=ref 2 and k=ref 3 and a=start 1 lpi and b=start 2 lpi and c=start 3 lpi in
-		if a=1 && c=3 && b=2 then if prem (3,2,1) lpi then calculp 3 1 2 [2] [1] t lpi filename else calculp 2 1 3 [3] [1] t lpi filename 
-		else if a=2 && c=1 && b=3 then if prem (2,1,3) lpi then calculp 2 3 1 [1] [3] t lpi filename else calculp 1 3 2 [2] [3] t lpi filename 
-		else if a=3 && c=2 && b=1 then if prem (1,3,2) lpi then calculp 1 2 3 [3] [2] t lpi filename else calculp 3 2 1 [1] [2] t lpi filename 
+		if a=1 && c=3 && b=2 then if prem (3,2,1) lpi then calculp 3 1 2 [2] [1] t lpi filename else calculp 2 1 3 [3] [1] t lpi filename
+		else if a=2 && c=1 && b=3 then if prem (2,1,3) lpi then calculp 2 3 1 [1] [3] t lpi filename else calculp 1 3 2 [2] [3] t lpi filename
+		else if a=3 && c=2 && b=1 then if prem (1,3,2) lpi then calculp 1 2 3 [3] [2] t lpi filename else calculp 3 2 1 [1] [2] t lpi filename
 		else begin
 			while not((test4 !i !j !k [!k] [!j] t lpi)||(test4 !i !k !j [!j] [!k] t lpi)) do
 				incr k;
