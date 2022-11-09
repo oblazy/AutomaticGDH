@@ -10,7 +10,7 @@ As of today (Nov 2022), it works with current OCaml version (there was some oddi
 
 ## Use
 Assuming a properly installed ocaml, simply run
-> ocaml coeur.ml *filename*
+> ocaml core.ml *filename*
 
 Where filename is the name of your protocol .txt file without the extension.
 
