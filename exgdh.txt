@@ -1,0 +1,18 @@
+*Exemple de description Ex-GDH
+1 - R1,2 > 2
+*1 envoie à 2 g à la puissance RR1 (R ^ )
+1 - R1,1 > 2
+*1 envoie à 2 : g à la puissance R1
+2 - R1,2R2,1K2|3 > 3
+*2 envoie à 3 g à la puissance RR1*R2* K23 (la clé secrète à long terme connue de M2 et M3)
+*La barre Ki|j permet au programme (s'il y a plus de 9 personnes) de séparer correctement K121 K12|1 ou K1|21
+*N'importe quel symbole hors chiffre et espace peut être employé à la place de |
+2 - R1,1K2|3 > 3 
+2 - R1,1R2,1 > 3
+3 - R1,2R2,1R3,1K1|3 > 1
+3 - R1,1R3,1K2|3K2|3 > 2
+*On annonce la fin du fichier, ca permet d'éviter à caml d'avoir à le gérer
+
+==EOF==
+
+De plus, on peut mettre une description du protocole en dessous sans avoir à commenter chaque ligne...

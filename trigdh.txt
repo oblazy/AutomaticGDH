@@ -1,0 +1,12 @@
+% Exemple de description Tri-GDH
+1 - R1 > 2
+2 - R2 > 3
+3 - R3 > 1
+
+1 - R1R3K1|2 > 2
+2 - R1R2K2|3 > 3
+3 - R2R3K1|3 > 1
+
+==EOF==
+
+De plus, on peut mettre une description du protocole en dessous sans avoir à commenter chaque ligne...

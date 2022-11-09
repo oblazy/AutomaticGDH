@@ -1,0 +1,15 @@
+% Exemple de description Tri-GDH 4
+1 - R1 > 2
+2 - R2 > 3
+3 - R3 > 4
+4 - R4 > 1
+
+1 - R1R4 > 2
+2 - R1R2 > 3
+3 - R2R3 > 4
+4 - R3R4 > 1
+
+1 - R1R3R4K1|2 > 2
+2 - R1R2R4K2|3 > 3
+3 - R1R2R3K3|4 > 4
+4 - R2R3R4K1|4 > 1
